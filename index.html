@@ -6,7 +6,6 @@
     <title>Almuerzos</title>
     <meta name="theme-color" content="#146c63">
     <meta name="apple-mobile-web-app-title" content="Almuerzos">
-    <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" href="apple-touch-icon.png">
@@ -23,7 +22,11 @@
         text-align: center;
         padding: 24px;
       }
-      .card { max-width: 360px; }
+
+      .card {
+        max-width: 360px;
+      }
+
       img {
         width: 96px;
         height: 96px;
@@ -31,35 +34,6 @@
         display: block;
         margin: 0 auto 16px;
       }
-      h1 { margin: 0 0 8px; font-size: 28px; }
-      p {
-        margin: 0 0 18px;
-        color: #667085;
-        line-height: 1.35;
-      }
-      a.button {
-        display: inline-flex;
-        min-height: 48px;
-        align-items: center;
-        justify-content: center;
-        border-radius: 10px;
-        padding: 0 18px;
-        background: #146c63;
-        color: white;
-        text-decoration: none;
-        font-weight: 700;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="card">
-      <img src="apple-touch-icon.png" alt="">
-      <h1>Almuerzos</h1>
-      <p>Pulsa para abrir la app compartida.</p>
-      <a class="button" href="https://script.google.com/macros/s/AKfycbwjMEPBvM5tkdxXT2mRkXmreqv7MRmVzrKnUQ5UczjJuXBzwV-ucDW-JrmPolq2tr82/exec">Abrir app</a>
-    </div>
-  </body>
-</html>      }
 
       h1 {
         margin: 0 0 8px;
@@ -90,13 +64,15 @@
     <div class="card">
       <img src="apple-touch-icon.png" alt="">
       <h1>Almuerzos</h1>
-      <p>Para crear el icono bonito, añade esta pantalla al inicio. Al abrirla desde el icono, entrará en la app.</p>
-      <a class="button" id="openLink" href="https://script.google.com/macros/s/AKfycbwjMEPBvM5tkdxXT2mRkXmreqv7MRmVzrKnUQ5UczjJuXBzwV-ucDW-JrmPolq2tr82/exec">Abrir app</a>
+      <p>Pulsa para abrir la app compartida.</p>
+      <a
+        class="button"
+        id="openLink"
+        target="_blank"
+        rel="noopener"
+        href="https://script.google.com/macros/s/AKfycbwjMEPBvM5tkdxXT2mRkXmreqv7MRmVzrKnUQ5UczjJuXBzwV-ucDW-JrmPolq2tr82/exec">
+        Abrir app
+      </a>
     </div>
-    <script>
-      const appUrl = "https://script.google.com/macros/s/AKfycbwjMEPBvM5tkdxXT2mRkXmreqv7MRmVzrKnUQ5UczjJuXBzwV-ucDW-JrmPolq2tr82/exec";
-      const isStandalone = window.navigator.standalone === true || window.matchMedia("(display-mode: standalone)").matches;
-      if (isStandalone) window.location.replace(appUrl);
-    </script>
   </body>
 </html>
